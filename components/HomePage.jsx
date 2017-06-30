@@ -68,7 +68,8 @@ export default class HomePage extends React.Component {
 
     var bearer = `Bearer ${this.state.idToken}`;
     console.log('bearer: ', bearer);
-    axios.get('/data', { headers: {
+    axios.get('/data',{
+        headers: {
         Authorization: bearer
       }
     }).then(response => {

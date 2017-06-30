@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "WEBPACK_CONFIG=./webpack.config.js node server/server.js",
+    "start": "nodemon server/server.js --exec babel-node --presets es2015 --watch",
     "webpack-start": "webpack --config webpack.config.js --progress --colors"
   },
   "keywords": [],
@@ -16,7 +16,9 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "express-session": "^1.15.3",
-    "path": "^0.12.7"
+    "jws": "^3.1.4",
+    "path": "^0.12.7",
+    "querystring": "^0.2.0"
   },
   "devDependencies": {
     "axios": "^0.16.2",
